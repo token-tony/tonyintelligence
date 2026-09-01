@@ -1,555 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tony Intelligence builds practical, privacy-minded tools and services that help small organizations make clearer decisions about AI, payments, technology, and digital risk.">
-  <meta name="theme-color" content="#102a32">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tony Intelligence | Practical Digital Guidance and Tools</title>
+  <meta name="description" content="Tony Intelligence provides practical tools, evidence-based guidance, and clear next steps for people and small organizations navigating AI, privacy, security, scams, and digital risk.">
+  <meta name="theme-color" content="#0b1e36">
   <link rel="canonical" href="https://tonyintelligence.com/">
-  <title>Tony Intelligence | Clear Decisions in a Digital World</title>
+  <meta property="og:title" content="Tony Intelligence | Practical Digital Guidance and Tools">
+  <meta property="og:description" content="Clear, practical help for people and small organizations navigating AI, technology, privacy, security, scams, and digital risk.">
+  <meta property="og:url" content="https://tonyintelligence.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tony Intelligence">
   <link rel="icon" href="https://tonyintelligence.com/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="https://tonyintelligence.com/assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="https://tonyintelligence.com/assets/apple-touch-icon.png">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tony Intelligence",
-    "url": "https://tonyintelligence.com/",
-    "email": "reece@tonyintelligence.com",
-    "areaServed": "US",
-    "description": "Practical, privacy-minded tools and guidance for small organizations navigating AI, payments, technology, and digital risk."
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Tony Intelligence","url":"https://tonyintelligence.com/","email":"reece@tonyintelligence.com","areaServed":"US","description":"Practical intelligence, tools, and guidance for people and small organizations navigating AI, technology, privacy, security, scams, and digital risk."}
   </script>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Tony Intelligence Products and Services",
-    "itemListElement":[
-      {"@type":"Offer","position":1,"name":"ChangeCheck","price":"29","priceCurrency":"USD","url":"https://buy.stripe.com/7sY6oIb3X4UT8DFcJo8so01"},
-      {"@type":"Offer","position":2,"name":"AI Visibility & Opportunity Audit","price":"49","priceCurrency":"USD","url":"https://tonyintelligence.com/#visibility-audit"},
-      {"@type":"Offer","position":3,"name":"ClearUse","price":"39","priceCurrency":"USD","url":"https://buy.stripe.com/28EaEYgohbjhcTVbFk8so02"},
-      {"@type":"Offer","position":4,"name":"ClauseGuard","price":"19","priceCurrency":"USD","url":"https://buy.stripe.com/00weVe1tnafddXZfVA8so03"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"ItemList","name":"Available Tony Intelligence services and products","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Service","name":"AI Visibility & Opportunity Audit","provider":{"@type":"Organization","name":"Tony Intelligence"},"url":"https://tonyintelligence.com/#visibility-audit","offers":{"@type":"Offer","price":"49","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},{"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"ChangeCheck","applicationCategory":"BusinessApplication","url":"https://change-check.reecewhisler.chatgpt.site/","offers":{"@type":"Offer","price":"29","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}]}
   </script>
   <style>
-    :root {
-      --ink:#12262d; --deep:#0b1d23; --forest:#16404a; --cream:#f6f3eb;
-      --paper:#fffdf8; --soft:#edf1ed; --gold:#bf8a3b; --gold-light:#e8d4ad;
-      --muted:#53666b; --line:#d9ddd7; --white:#fff;
-      --shadow:0 24px 60px rgba(15,38,45,.10);
-      --shadow-soft:0 12px 32px rgba(15,38,45,.07);
-    }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body {
-      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:var(--cream); color:var(--ink); line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-    }
-    .shell { width:min(1160px,calc(100% - 40px)); margin:0 auto; }
-    .site-header {
-      position:relative; z-index:10; border-bottom:1px solid rgba(18,38,45,.1);
-      background:rgba(246,243,235,.94); backdrop-filter:blur(12px);
-    }
-    .nav {
-      min-height:82px; display:flex; align-items:center; justify-content:space-between;
-      gap:28px;
-    }
-    .brand {
-      display:inline-flex; align-items:center; gap:12px; color:var(--deep);
-      text-decoration:none;
-    }
-    .brand-mark { width:42px; height:48px; flex:0 0 auto; }
-    .brand-copy { display:grid; line-height:1; }
-    .brand-copy strong {
-      font:700 1.3rem/1 Georgia,"Times New Roman",serif; letter-spacing:-.02em;
-    }
-    .brand-copy span {
-      margin-top:6px; color:var(--muted); font-size:.68rem; font-weight:750;
-      letter-spacing:.15em; text-transform:uppercase;
-    }
-    .nav-links { display:flex; align-items:center; gap:26px; list-style:none; }
-    .nav-links a {
-      color:var(--muted); font-size:.92rem; font-weight:650; text-decoration:none;
-    }
-    .nav-links a:hover,.nav-links a:focus-visible { color:var(--forest); }
-    .nav-contact {
-      padding:10px 16px; border:1px solid rgba(18,38,45,.22); border-radius:999px;
-    }
-    .hero-wrap {
-      position:relative; overflow:hidden;
-      background:radial-gradient(circle at 82% 10%,rgba(191,138,59,.16),transparent 30%),
-        linear-gradient(180deg,var(--cream),#f1efe7);
-    }
-    .hero-wrap::after {
-      content:""; position:absolute; right:-180px; bottom:-280px; width:620px;
-      height:620px; border:1px solid rgba(22,64,74,.12); border-radius:50%;
-      box-shadow:0 0 0 68px rgba(22,64,74,.035),0 0 0 136px rgba(22,64,74,.025);
-      pointer-events:none;
-    }
-    .hero {
-      position:relative; z-index:1; min-height:650px; display:grid;
-      grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr);
-      align-items:center; gap:76px; padding:88px 0 96px;
-    }
-    .eyebrow {
-      display:inline-flex; align-items:center; gap:10px; margin-bottom:20px;
-      color:var(--forest); font-size:.76rem; font-weight:800; letter-spacing:.14em;
-      text-transform:uppercase;
-    }
-    .eyebrow::before { content:""; width:30px; height:2px; background:var(--gold); }
-    h1,h2,h3 { color:var(--deep); text-wrap:balance; }
-    h1,h2 { font-family:Georgia,"Times New Roman",serif; font-weight:700; letter-spacing:-.035em; }
-    h1 { max-width:760px; font-size:clamp(3rem,6vw,5.6rem); line-height:.98; }
-    .hero-lede {
-      max-width:660px; margin-top:28px; color:var(--muted); font-size:1.16rem;
-      line-height:1.75;
-    }
-    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:34px; }
-    .button {
-      min-height:52px; display:inline-flex; align-items:center; justify-content:center;
-      gap:10px; padding:0 22px; border:1px solid transparent; border-radius:999px;
-      font-size:.94rem; font-weight:780; text-decoration:none;
-      transition:transform 160ms ease,box-shadow 160ms ease,background 160ms ease;
-    }
-    .button:hover { transform:translateY(-2px); }
-    .button:focus-visible,a:focus-visible { outline:3px solid var(--gold-light); outline-offset:3px; }
-    .button-primary {
-      background:var(--forest); color:var(--white);
-      box-shadow:0 10px 24px rgba(22,64,74,.18);
-    }
-    .button-primary:hover { background:var(--deep); box-shadow:0 14px 30px rgba(22,64,74,.24); }
-    .button-secondary {
-      border-color:rgba(18,38,45,.22); background:rgba(255,255,255,.48); color:var(--ink);
-    }
-    .hero-proof {
-      position:relative; padding:34px; border:1px solid rgba(18,38,45,.12);
-      border-radius:26px; background:rgba(255,253,248,.82); box-shadow:var(--shadow);
-    }
-    .hero-proof::before {
-      content:""; position:absolute; top:0; left:34px; width:72px; height:4px;
-      background:var(--gold);
-    }
-    .hero-proof h2 { font-size:1.55rem; line-height:1.2; }
-    .proof-list { display:grid; gap:18px; margin-top:26px; list-style:none; }
-    .proof-list li {
-      display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:start;
-      color:var(--muted); font-size:.94rem;
-    }
-    .proof-check {
-      width:30px; height:30px; display:grid; place-items:center; border-radius:50%;
-      background:var(--soft); color:var(--forest); font-weight:900;
-    }
-    .proof-list strong { display:block; color:var(--ink); font-size:.96rem; }
-    .principles {
-      border-block:1px solid rgba(18,38,45,.1); background:var(--paper);
-    }
-    .principles-row {
-      min-height:92px; display:grid; grid-template-columns:repeat(4,1fr); align-items:center;
-    }
-    .principle {
-      padding:0 24px; border-right:1px solid var(--line); color:var(--forest);
-      font-size:.78rem; font-weight:820; letter-spacing:.08em; text-align:center;
-      text-transform:uppercase;
-    }
-    .principle:first-child { padding-left:0; }
-    .principle:last-child { padding-right:0; border-right:0; }
-    .section { padding:104px 0; }
-    .section-kicker {
-      margin-bottom:12px; color:var(--gold); font-size:.76rem; font-weight:850;
-      letter-spacing:.14em; text-transform:uppercase;
-    }
-    .section-heading { max-width:760px; font-size:clamp(2.25rem,4vw,3.7rem); line-height:1.08; }
-    .section-intro { max-width:660px; margin-top:18px; color:var(--muted); font-size:1.05rem; }
-    .offers { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:50px; }
-    .offer {
-      position:relative; overflow:hidden; display:flex; flex-direction:column;
-      min-height:470px; padding:40px; border:1px solid var(--line); border-radius:26px;
-      background:var(--paper); box-shadow:var(--shadow-soft);
-    }
-    .offer-featured { background:var(--forest); color:rgba(255,255,255,.78); }
-    .offer-featured::after {
-      content:"CC"; position:absolute; right:-14px; bottom:-64px;
-      color:rgba(255,255,255,.045); font:700 13rem/1 Georgia,"Times New Roman",serif;
-      letter-spacing:-.12em; pointer-events:none;
-    }
-    .offer-top,.offer-body,.offer-footer,.disclosure { position:relative; z-index:1; }
-    .offer-top { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .badge {
-      display:inline-flex; align-items:center; padding:7px 11px; border-radius:999px;
-      background:var(--soft); color:var(--forest); font-size:.68rem; font-weight:850;
-      letter-spacing:.09em; text-transform:uppercase;
-    }
-    .offer-featured .badge { background:rgba(255,255,255,.1); color:#f2e1bd; }
-    .price { color:var(--ink); font-size:.92rem; font-weight:800; }
-    .offer-featured .price { color:var(--white); }
-    .offer-body { margin-top:38px; }
-    .offer h3 {
-      font:700 2.25rem/1.05 Georgia,"Times New Roman",serif; letter-spacing:-.035em;
-    }
-    .offer-featured h3 { color:var(--white); }
-    .offer p { margin-top:18px; color:var(--muted); font-size:1rem; }
-    .offer-featured p { color:rgba(255,255,255,.76); }
-    .deliverables { display:grid; gap:9px; margin-top:22px; list-style:none; color:var(--muted); font-size:.9rem; }
-    .deliverables li::before { content:"—"; margin-right:8px; color:var(--gold); font-weight:900; }
-    .offer-featured .deliverables { color:rgba(255,255,255,.74); }
-    .offer-footer { margin-top:auto; padding-top:34px; }
-    .offer-featured .button { background:var(--paper); color:var(--forest); box-shadow:none; }
-    .offer-featured .button:hover { background:var(--white); }
-    .disclosure {
-      margin-top:20px; padding-top:18px; border-top:1px solid rgba(255,255,255,.16);
-      color:rgba(255,255,255,.55)!important; font-size:.75rem!important; line-height:1.55;
-    }
-    .process-section { background:var(--soft); border-block:1px solid var(--line); }
-    .process-grid {
-      display:grid; grid-template-columns:.8fr 1.2fr; gap:90px; align-items:start;
-    }
-    .steps { display:grid; counter-reset:step; }
-    .step {
-      counter-increment:step; display:grid; grid-template-columns:58px 1fr; gap:20px;
-      padding:26px 0; border-bottom:1px solid rgba(18,38,45,.13);
-    }
-    .step:first-child { padding-top:0; }
-    .step:last-child { padding-bottom:0; border-bottom:0; }
-    .step::before {
-      content:"0" counter(step); color:var(--gold);
-      font:700 1.25rem/1 Georgia,"Times New Roman",serif;
-    }
-    .step h3 { font-size:1.05rem; }
-    .step p { margin-top:5px; color:var(--muted); font-size:.94rem; }
-    .about-grid {
-      display:grid; grid-template-columns:1.1fr .9fr; gap:70px; align-items:center;
-    }
-    .about-copy p { margin-top:20px; color:var(--muted); font-size:1.05rem; }
-    .about-card {
-      padding:36px; border-left:4px solid var(--gold); background:var(--paper);
-      box-shadow:var(--shadow-soft);
-    }
-    .about-card p {
-      color:var(--ink); font:400 1.45rem/1.45 Georgia,"Times New Roman",serif;
-    }
-    .about-card small {
-      display:block; margin-top:20px; color:var(--muted); font-size:.84rem;
-      font-weight:720; letter-spacing:.04em;
-    }
-    .coming-next {
-      padding:28px 32px; display:flex; align-items:center; justify-content:space-between;
-      gap:24px; border:1px solid var(--line); border-radius:16px;
-    }
-    .coming-next h3 { font-size:1.1rem; }
-    .coming-next p { margin-top:3px; color:var(--muted); font-size:.9rem; }
-    .coming-label {
-      flex:0 0 auto; color:var(--forest); font-size:.72rem; font-weight:850;
-      letter-spacing:.1em; text-transform:uppercase;
-    }
-    .site-footer {
-      margin-top:104px; padding:62px 0 30px; background:var(--deep);
-      color:rgba(255,255,255,.68);
-    }
-    .footer-top {
-      display:grid; grid-template-columns:1.15fr .85fr; gap:80px; padding-bottom:48px;
-    }
-    .footer-brand {
-      color:var(--white); font:700 2rem/1 Georgia,"Times New Roman",serif;
-      letter-spacing:-.03em;
-    }
-    .footer-copy { max-width:480px; margin-top:12px; font-size:.92rem; }
-    .footer-contact { justify-self:end; }
-    .footer-contact strong {
-      display:block; margin-bottom:10px; color:var(--gold-light); font-size:.72rem;
-      letter-spacing:.12em; text-transform:uppercase;
-    }
-    .footer-contact a { color:var(--white); font-size:1rem; font-weight:700; text-decoration:none; }
-    .footer-contact a:hover { text-decoration:underline; }
-    .footer-bottom {
-      display:flex; align-items:center; justify-content:space-between; gap:24px;
-      padding-top:26px; border-top:1px solid rgba(255,255,255,.12); font-size:.78rem;
-    }
-    .footer-trust { max-width:680px; text-align:right; }
-    @media (max-width:900px) {
-      .hero { grid-template-columns:1fr; gap:50px; padding:72px 0 80px; }
-      .hero-proof { max-width:620px; }
-      .offers,.process-grid,.about-grid,.footer-top { grid-template-columns:1fr; }
-      .process-grid,.about-grid { gap:52px; }
-      .footer-contact { justify-self:start; }
-    }
-    @media (max-width:720px) {
-      .shell { width:min(100% - 28px,1160px); }
-      .nav { min-height:72px; }
-      .nav-links li:not(:last-child) { display:none; }
-      .nav-contact { padding:8px 13px; font-size:.82rem!important; }
-      .brand-mark { width:36px; height:42px; }
-      .brand-copy strong { font-size:1.08rem; }
-      .brand-copy span { display:none; }
-      .hero { min-height:auto; }
-      h1 { font-size:clamp(2.75rem,13vw,4rem); }
-      .hero-lede { font-size:1.04rem; }
-      .actions,.actions .button { width:100%; }
-      .hero-proof,.offer,.about-card { padding:28px; }
-      .principles-row { grid-template-columns:repeat(2,1fr); padding:16px 0; }
-      .principle { min-height:48px; display:grid; place-items:center; padding:0 12px; }
-      .principle:nth-child(2) { border-right:0; }
-      .section { padding:78px 0; }
-      .offers { margin-top:36px; }
-      .offer { min-height:0; }
-      .offer-footer { margin-top:30px; }
-      .offer-footer .button { width:100%; }
-      .coming-next,.footer-bottom { align-items:flex-start; flex-direction:column; }
-      .footer-trust { text-align:left; }
-    }
-    @media (prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; }
-      .button { transition:none; }
-    }
+    :root{--navy:#0b1e36;--deep:#08172b;--blue:#123254;--accent:#2f6694;--pale:#e9f1f7;--slate:#536579;--ink:#34465a;--line:#dce4eb;--soft:#f4f7f9;--paper:#fff;--gold:#c3a166;--gold-soft:#eadfc9;--shadow:0 20px 55px rgba(8,23,43,.09);--soft-shadow:0 10px 28px rgba(8,23,43,.07);--radius:22px}
+    *,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;color:var(--deep);background:var(--paper);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit}svg{display:block;max-width:100%}h1,h2,h3,p,ul{margin-top:0}h1,h2,h3{color:var(--deep);text-wrap:balance}h1,h2{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}h1{margin-bottom:24px;font-size:clamp(2.85rem,6vw,5.7rem);line-height:.98}h1 span{display:block;margin-bottom:12px;color:var(--ink);font-size:.54em;letter-spacing:-.02em}h2{margin-bottom:18px;font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.08}h3{margin-bottom:12px;font-size:1.3rem;line-height:1.25}.shell{width:min(1160px,calc(100% - 40px));margin:auto}.narrow{width:min(860px,100%)}.skip{position:fixed;top:12px;left:12px;z-index:1000;transform:translateY(-160%);padding:10px 14px;border-radius:8px;background:#fff}.skip:focus{transform:none}:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    header{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(8,23,43,.1);background:rgba(255,255,255,.94);backdrop-filter:blur(14px)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}.mark{width:43px;height:50px;flex:0 0 auto}.brand-copy{display:grid;line-height:1}.brand-copy strong{font:700 1.28rem/1 Georgia,serif}.brand-copy span{margin-top:6px;color:var(--slate);font-size:.67rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.nav-links{display:flex;align-items:center;gap:24px;margin:0;padding:0;list-style:none}.nav-links a{color:var(--ink);font-size:.9rem;font-weight:700;text-decoration:none}.nav-links a:hover{color:var(--accent)}.nav-links .contact{padding:9px 14px;border:1px solid #cbd5df;border-radius:999px}
+    .hero{position:relative;overflow:hidden;padding:104px 0 96px;background:radial-gradient(circle at 88% 12%,rgba(47,102,148,.12),transparent 30%),linear-gradient(180deg,#f9fbfc,#f3f6f8)}.hero:after{content:"";position:absolute;right:-130px;bottom:-290px;width:620px;height:620px;border:1px solid rgba(47,102,148,.13);border-radius:50%;box-shadow:0 0 0 72px rgba(47,102,148,.025),0 0 0 144px rgba(47,102,148,.018)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:74px;align-items:center}.eyebrow,.kicker{margin-bottom:14px;color:var(--accent);font-size:.75rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:22px}.eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}.hero-copy{max-width:720px;margin-bottom:32px;color:var(--ink);font-size:1.08rem}.hero-copy strong{color:var(--navy)}.button{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 22px;border:1px solid transparent;border-radius:999px;color:#fff;background:var(--blue);box-shadow:0 10px 24px rgba(18,50,84,.17);font-size:.94rem;font-weight:800;text-decoration:none;transition:.16s ease}.button:hover{transform:translateY(-2px);background:var(--deep);box-shadow:0 14px 30px rgba(18,50,84,.22)}.protector{padding:34px;border:1px solid rgba(8,23,43,.1);border-radius:var(--radius);background:rgba(255,255,255,.88);box-shadow:var(--shadow)}.protector svg{width:64px;height:74px;margin-bottom:24px}.protector h2{font-size:1.55rem}.protector p{margin:0;color:var(--slate);font-size:.94rem}
+    .trust{border-block:1px solid var(--line)}.trust-grid{min-height:86px;display:grid;grid-template-columns:repeat(4,1fr);align-items:center}.trust-grid span{padding:0 18px;border-right:1px solid var(--line);color:var(--blue);font-size:.76rem;font-weight:850;letter-spacing:.08em;text-align:center;text-transform:uppercase}.trust-grid span:last-child{border:0}.section{padding:104px 0;scroll-margin-top:84px}.tinted{border-block:1px solid var(--line);background:#f7f8f7}.dark{color:rgba(255,255,255,.78);background:var(--navy)}.dark h2,.dark h3{color:#fff}.dark .kicker{color:var(--gold-soft)}.intro{max-width:720px;color:var(--slate);font-size:1.04rem}.why{display:grid;gap:22px;color:var(--ink);font-size:1.04rem}.why p{margin:0}.why .reason{color:var(--navy);font-weight:850}.why-list{display:grid;gap:10px;padding:0;list-style:none}.why-list li{position:relative;padding-left:22px}.why-list li:before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;border:2px solid var(--gold);border-radius:50%}.question{color:var(--navy);font:700 clamp(1.65rem,3vw,2.35rem)/1.25 Georgia,serif}.promise{padding:26px 30px;border-left:4px solid var(--gold);background:#fff;box-shadow:var(--soft-shadow);font:700 1.22rem/1.5 Georgia,serif}
+    .product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:46px}.product{display:flex;flex-direction:column;min-height:300px;padding:32px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--soft-shadow)}.card-top{display:flex;align-items:center;justify-content:space-between;gap:14px}.number{color:var(--gold);font:700 1rem/1 Georgia,serif}.status{display:inline-flex;padding:6px 10px;border-radius:999px;color:var(--accent);background:var(--pale);font-size:.68rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.soon{color:var(--slate);background:#edf2f6}.product h3{margin-top:28px;font:700 1.55rem/1.15 Georgia,serif}.product p{color:var(--slate)}.text-link{width:max-content;margin-top:auto;color:var(--blue);font-weight:850;text-decoration:none}.text-link:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+    .detail{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:72px;align-items:start}.lede{margin-bottom:26px;color:var(--navy);font:700 clamp(1.42rem,2.6vw,2rem)/1.35 Georgia,serif}.copy p{color:var(--ink)}.example{margin-top:32px;padding:28px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--soft-shadow)}.example h3:before{content:"Example";display:inline-block;margin-right:10px;padding:5px 8px;border-radius:6px;color:var(--accent);background:var(--pale);font:850 .64rem/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}.checklist{display:grid;gap:11px;margin:18px 0 0;padding:0;list-style:none}.checklist li{position:relative;padding-left:25px;color:var(--ink)}.checklist li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:900}.dash li:before{content:"—"}.side{position:sticky;top:112px;padding:34px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}.side h3{font:700 1.45rem/1.2 Georgia,serif}.price{margin:22px 0 3px;color:var(--navy);font:700 2.2rem/1 Georgia,serif}.delivery{margin-bottom:22px;color:var(--slate);font-size:.92rem;font-weight:700}.side .button{width:100%;margin-top:26px}.micro{margin:12px 0 0;color:var(--slate);font-size:.8rem;text-align:center}.sample{display:grid;gap:9px;margin-top:24px}.sample div{display:grid;grid-template-columns:1fr auto;gap:18px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--soft);font-size:.84rem}.sample span{color:var(--slate)}.states{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.states strong{padding:11px 8px;border:1px solid #cbd5df;border-radius:9px;background:var(--soft);font-size:.72rem;text-align:center}.limits{margin-top:28px;padding:22px;border-left:4px solid var(--gold);background:#edf2f6;color:var(--ink)}.limits h3{font-size:1rem}.limits p{margin:0;font-size:.92rem}.coming{padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}.coming .status{margin-bottom:18px}.legal{margin-top:26px;padding:24px;border:1px solid var(--gold-soft);border-left:4px solid var(--gold);background:#fffdfa;font-weight:750}
+    .standard{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px}.standard-mark{width:94px;height:108px}.standard h2{font-size:clamp(1.65rem,3vw,2.55rem);line-height:1.25}.standard-copy{font-size:1.04rem}.standard-copy strong{color:var(--gold-soft)}footer{padding:58px 0 28px;color:rgba(255,255,255,.7);background:var(--deep)}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;padding-bottom:40px}.footer-brand{color:#fff;font:700 1.9rem/1 Georgia,serif}.footer-copy{max-width:520px;margin:12px 0 0;font-size:.92rem}.footer-contact{justify-self:end}.footer-contact strong{display:block;margin-bottom:8px;color:var(--gold-soft);font-size:.72rem;letter-spacing:.11em;text-transform:uppercase}.footer-contact a{color:#fff;font-weight:750;text-decoration:none}.footer-contact a:hover{text-decoration:underline}.footer-note{margin-top:8px;font-size:.82rem}.footer-bottom{display:flex;justify-content:space-between;gap:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:.78rem}
+    @media(max-width:920px){.hero-grid,.detail,.standard{grid-template-columns:1fr;gap:48px}.hero{padding:78px 0}.protector{max-width:640px}.side{position:static}.footer-grid{grid-template-columns:1fr;gap:36px}.footer-contact{justify-self:start}}@media(max-width:740px){html{scroll-padding-top:76px}.shell{width:min(100% - 28px,1160px)}.nav{min-height:70px}.mark{width:36px;height:42px}.brand-copy strong{font-size:1.06rem}.brand-copy span{display:none}.nav-links li:not(:last-child){display:none}.nav-links .contact{padding:8px 12px;font-size:.8rem}h1{font-size:clamp(2.55rem,12.7vw,4rem)}.hero-copy{font-size:1rem}.button{width:100%}.trust-grid{grid-template-columns:repeat(2,1fr);padding:12px 0}.trust-grid span{min-height:44px;display:grid;place-items:center;padding:0 10px}.trust-grid span:nth-child(2){border:0}.section{padding:76px 0}.product-grid{grid-template-columns:1fr;margin-top:34px}.product{min-height:260px;padding:26px}.example,.side,.coming,.protector{padding:24px}.states{grid-template-columns:1fr}.footer-bottom{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
   </style>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
     <div class="shell nav">
       <a class="brand" href="#top" aria-label="Tony Intelligence home">
-        <svg class="brand-mark" viewBox="0 0 54 62" role="img" aria-label="Tony Intelligence shield mark">
-          <path d="M27 2 50 10v18c0 15-9.5 25.7-23 32C13.5 53.7 4 43 4 28V10L27 2Z" fill="#16404a"/>
-          <path d="M27 7.8 44.5 14v13.8c0 11.6-6.8 20.1-17.5 25.7-10.7-5.6-17.5-14.1-17.5-25.7V14L27 7.8Z" fill="none" stroke="#d5ae6a" stroke-width="1.6"/>
-          <path d="M16 20h22v5h-8v20h-6V25h-8v-5Z" fill="#fffdf8"/>
-          <path d="M34 28h5v17h-5z" fill="#d5ae6a"/>
-        </svg>
-        <span class="brand-copy">
-          <strong>Tony Intelligence</strong>
-          <span>Practical digital judgment</span>
-        </span>
+        <svg class="mark" viewBox="0 0 54 62" role="img" aria-label="Tony Intelligence shield mark"><path d="M27 2 50 10v18c0 15-9.5 25.7-23 32C13.5 53.7 4 43 4 28V10L27 2Z" fill="#123254"/><path d="M27 7.8 44.5 14v13.8c0 11.6-6.8 20.1-17.5 25.7-10.7-5.6-17.5-14.1-17.5-25.7V14L27 7.8Z" fill="none" stroke="#c3a166" stroke-width="1.6"/><path d="M16 20h22v5h-8v20h-6V25h-8v-5Z" fill="#fff"/><path d="M34 28h5v17h-5z" fill="#c3a166"/></svg>
+        <span class="brand-copy"><strong>Tony Intelligence</strong><span>Practical digital judgment</span></span>
       </a>
-      <nav aria-label="Primary navigation">
-        <ul class="nav-links">
-          <li><a href="#offers">What we offer</a></li>
-          <li><a href="#approach">Our approach</a></li>
-          <li><a href="#about">Why Tony</a></li>
-          <li><a class="nav-contact" href="mailto:reece@tonyintelligence.com">Contact</a></li>
-        </ul>
-      </nav>
+      <nav aria-label="Primary navigation"><ul class="nav-links"><li><a href="#why-tony">Why Tony</a></li><li><a href="#products">What we offer</a></li><li><a href="#standard">Our standard</a></li><li><a class="contact" href="mailto:reece@tonyintelligence.com">Contact</a></li></ul></nav>
     </div>
   </header>
-
-  <main id="top">
-    <section class="hero-wrap">
-      <div class="shell hero">
-        <div>
-          <div class="eyebrow">Built for small organizations</div>
-          <h1>Clear decisions in a fast-moving digital world.</h1>
-          <p class="hero-lede">
-            Tony Intelligence creates straightforward tools and hands-on reviews that
-            help small teams navigate AI, payment changes, technology, and digital risk—
-            without jargon, scare tactics, or inflated promises.
-          </p>
-          <div class="actions">
-            <a class="button button-primary" href="#offers">
-              See Our Tools <span aria-hidden="true">→</span>
-            </a>
-            <a class="button button-secondary" href="#visibility-audit">See the $49 AI Audit</a>
-          </div>
-        </div>
-        <aside class="hero-proof" aria-label="What to expect from Tony Intelligence">
-          <h2>Useful before impressive.</h2>
-          <ul class="proof-list">
-            <li><span class="proof-check" aria-hidden="true">✓</span><span><strong>Clear scope</strong>You know what the tool does—and what it does not do.</span></li>
-            <li><span class="proof-check" aria-hidden="true">✓</span><span><strong>Practical output</strong>Every offer ends with something your team can use.</span></li>
-            <li><span class="proof-check" aria-hidden="true">✓</span><span><strong>Honest boundaries</strong>No guarantees disguised as intelligence.</span></li>
-            <li><span class="proof-check" aria-hidden="true">✓</span><span><strong>Human support</strong>Questions go directly to Reece.</span></li>
-          </ul>
-        </aside>
+  <main id="main">
+    <section class="hero" id="top"><div class="shell hero-grid">
+      <div><div class="eyebrow">Clear guidance for a digital world</div><h1><span>Technology is moving fast.</span>Tony Intelligence helps you make sense of it.</h1><div class="hero-copy"><p>Tony Intelligence builds practical intelligence, tools, and guidance that help people and small organizations navigate AI, technology, privacy, security, digital risk, and the decisions that come with them.</p><p><strong>No hype. No fearmongering. Just clearer information and practical next steps.</strong></p></div><a class="button" href="#products">Explore what we can help with <span aria-hidden="true">↓</span></a></div>
+      <aside class="protector"><svg viewBox="0 0 54 62" aria-hidden="true"><path d="M27 2 50 10v18c0 15-9.5 25.7-23 32C13.5 53.7 4 43 4 28V10L27 2Z" fill="#123254"/><path d="M27 7.8 44.5 14v13.8c0 11.6-6.8 20.1-17.5 25.7-10.7-5.6-17.5-14.1-17.5-25.7V14L27 7.8Z" fill="none" stroke="#c3a166" stroke-width="1.6"/><path d="M16 20h22v5h-8v20h-6V25h-8v-5Z" fill="#fff"/><path d="M34 28h5v17h-5z" fill="#c3a166"/></svg><h2>Built to protect the decision-maker.</h2><p>We do the digging, explain the evidence in plain English, and make the next step easier to understand—without pretending uncertainty does not exist.</p></aside>
+    </div></section>
+    <div class="trust"><div class="shell trust-grid"><span>Plain English</span><span>Evidence shown</span><span>Honest limits</span><span>Practical next steps</span></div></div>
+    <section class="section" id="why-tony"><div class="shell narrow"><div class="kicker">Why Tony Intelligence</div><h2>Technology should make life easier. Too often, it does the opposite.</h2><div class="why">
+      <p>AI is changing how people work. Scams are getting harder to recognize. Businesses are trusting more software with their money and information. New tools show up faster than most people have time to evaluate them.</p>
+      <p>And most families and small businesses do not have a cybersecurity team, AI department, or technology adviser sitting down the hall.</p>
+      <p class="reason">That’s why Tony Intelligence exists.</p>
+      <p>We do the digging, separate useful information from noise, explain what actually matters in plain English, and help you make a better next decision.</p>
+      <ul class="why-list"><li>Sometimes that means helping a business adopt AI more safely.</li><li>Sometimes it means slowing down before changing a vendor’s payment information.</li><li>Sometimes it means finding the contract language everyone else skipped.</li></ul>
+      <p>Sometimes it simply means answering:</p><p class="question">“What should I actually do here?”</p>
+      <p>No fearmongering.<br>No hype.<br>No pretending certainty where there isn’t any.</p>
+      <p class="promise">Useful intelligence for people who have real work, real families, and real things to protect.</p>
+    </div></div></section>
+    <section class="section tinted" id="products"><div class="shell"><div class="kicker">What we offer</div><h2>Practical tools for real decisions</h2><p class="intro">Start with the decision in front of you. See exactly how each offer works before you choose whether it is right for you.</p><div class="product-grid">
+      <article class="product"><div class="card-top"><span class="number">01</span><span class="status">Available</span></div><h3>AI Visibility &amp; Opportunity Audit</h3><p>For business owners wondering how clearly AI-powered search understands their business.</p><a class="text-link" href="#visibility-audit">See how it works →</a></article>
+      <article class="product"><div class="card-top"><span class="number">02</span><span class="status">Available</span></div><h3>ChangeCheck</h3><p>For teams handling requests to change vendor payment information.</p><a class="text-link" href="#changecheck">See how it works →</a></article>
+      <article class="product"><div class="card-top"><span class="number">03</span><span class="status soon">Coming Soon</span></div><h3>ClearUse</h3><p>For small businesses trying to create understandable employee AI rules.</p><a class="text-link" href="#clearuse">See how it works →</a></article>
+      <article class="product"><div class="card-top"><span class="number">04</span><span class="status soon">Coming Soon</span></div><h3>ClauseGuard</h3><p>For businesses that want to understand important SaaS contract terms before committing.</p><a class="text-link" href="#clauseguard">See how it works →</a></article>
+    </div></div></section>
+    <section class="section" id="visibility-audit"><div class="shell detail">
+      <div class="copy"><div class="kicker">Personalized service</div><h2>AI Visibility &amp; Opportunity Audit</h2><p class="lede">“If someone asks an AI assistant about businesses like mine, does it understand who we are?”</p><p>AI-powered search increasingly relies on public information to understand businesses, services, locations, reputation, and relevance.</p><p>If that public picture is incomplete, inconsistent, or unclear, the business may be harder for modern search systems—and potential customers—to understand.</p>
+        <div class="example"><h3>An accounting firm in McKinney</h3><p>Tony Intelligence reviews signals such as:</p><ul class="checklist dash"><li>how consistently the business is identified</li><li>how clearly services are described</li><li>location and service-area information</li><li>public trust and authority signals</li><li>conflicting or outdated information</li><li>how AI/search systems currently represent the business where observable</li></ul><p style="margin:18px 0 0">We then turn the findings into practical actions.</p></div>
       </div>
-    </section>
-
-    <div class="principles" aria-label="Tony Intelligence principles">
-      <div class="shell principles-row">
-        <div class="principle">Plain English</div>
-        <div class="principle">Privacy-minded</div>
-        <div class="principle">Transparent pricing</div>
-        <div class="principle">No hype</div>
+      <aside class="side"><h3>What you receive</h3><ul class="checklist"><li>AI/search visibility snapshot</li><li>public-information consistency review</li><li>key strengths</li><li>issues worth correcting</li><li>supporting evidence and sources</li><li>prioritized recommendations</li><li>three specific next actions</li></ul><div class="sample" aria-label="Representative audit categories"><div><strong>Business identity</strong><span>Clear / Mixed</span></div><div><strong>Service clarity</strong><span>Strong / Improve</span></div><div><strong>Public consistency</strong><span>Aligned / Conflict</span></div></div><p class="price">$49 one-time</p><p class="delivery">Delivered within 24 hours<br>No passwords or private account access required</p><a class="button" href="https://buy.stripe.com/7sYfZi5JDfzxaLN4cS8so00" aria-label="Get my AI Visibility Audit for 49 dollars">Get My AI Visibility Audit — $49 →</a><p class="micro">Secure checkout through Stripe.</p></aside>
+    </div></section>
+    <section class="section tinted" id="changecheck"><div class="shell detail">
+      <div class="copy"><div class="kicker">Guided business control</div><h2>ChangeCheck</h2><p class="lede">“A vendor asks you to change where future payments are sent. What happens next?”</p><p>A request like that may be completely legitimate.</p><p>It is also the kind of routine business process attackers try to exploit.</p><p>ChangeCheck gives the person handling the request a structured process to slow down, document what they checked, and decide what should happen next.</p>
+        <div class="example"><h3>A longtime vendor emails</h3><p>“We’ve changed banks. Please use the new payment information for future invoices.”</p><p>Instead of immediately changing the vendor record, ChangeCheck walks the employee through questions such as:</p><ul class="checklist dash"><li>How was the request received?</li><li>Was the request expected?</li><li>Was the vendor contacted independently using previously trusted contact information?</li><li>Who performed that contact?</li><li>Were there inconsistencies or warning signs?</li><li>Does another person need to review the change?</li></ul><p style="margin:18px 0 0">ChangeCheck then creates a <strong>Payment Change Decision Record</strong> with one of three outcomes:</p><div class="states"><strong>HOLD</strong><strong>ESCALATE</strong><strong>PROCEED WITH INTERNAL UPDATE</strong></div></div>
+        <div class="limits"><h3>What ChangeCheck does—and does not do</h3><p>ChangeCheck helps document a human payment-change control process. It does <strong>not</strong> verify bank-account ownership, establish vendor identity, detect every fraud attempt, or guarantee that a payment is safe.</p></div>
       </div>
-    </div>
-
-    <section class="section" id="offers">
-      <div class="shell">
-        <div class="section-kicker">Practical offers</div>
-        <h2 class="section-heading">Start with a real problem—not another complicated platform.</h2>
-        <p class="section-intro">
-          Our current offers are focused, affordable, and designed to help small teams
-          make one important decision more carefully.
-        </p>
-        <div class="offers">
-          <article class="offer offer-featured">
-            <div class="offer-top">
-              <span class="badge">Founding pilot · Live</span>
-              <span class="price">$29 one-time</span>
-            </div>
-            <div class="offer-body">
-              <h3>ChangeCheck</h3>
-              <p>
-                A guided payment-change control for small organizations. Slow down a
-                vendor payment-detail change, document what your team checked, and leave
-                a clear decision record before money moves.
-              </p>
-              <ul class="deliverables">
-                <li>Guided human verification workflow</li>
-                <li>Documented review and decision record</li>
-                <li>Clear limits and escalation prompts</li>
-              </ul>
-            </div>
-            <div class="offer-footer">
-              <a class="button" href="https://buy.stripe.com/7sY6oIb3X4UT8DFcJo8so01" aria-label="Purchase ChangeCheck Founding Pilot for $29">
-                Start ChangeCheck <span aria-hidden="true">→</span>
-              </a>
-            </div>
-            <p class="disclosure">
-              ChangeCheck documents completion of a human payment-change control process.
-              It does not verify bank-account ownership, establish vendor identity, detect
-              all fraud, or guarantee payment safety.
-            </p>
-          </article>
-
-          <article class="offer" id="visibility-audit">
-            <div class="offer-top">
-              <span class="badge">Personalized service · Live</span>
-              <span class="price">$49 one-time</span>
-            </div>
-            <div class="offer-body">
-              <h3>AI Visibility &amp; Opportunity Audit</h3>
-              <p>
-                See how clearly AI-powered search and discovery systems understand your
-                business, then get a prioritized human review built around practical next steps.
-              </p>
-              <ul class="deliverables">
-                <li>Personalized visibility review</li>
-                <li>Prioritized recommendations</li>
-                <li>Three specific actions to take next</li>
-              </ul>
-            </div>
-            <div class="offer-footer">
-              <a class="button button-primary" href="https://buy.stripe.com/7sYfZi5JDfzxaLN4cS8so00" aria-label="Purchase the AI Visibility and Opportunity Audit for $49">
-                Get My $49 Audit <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="offer" id="clearuse">
-            <div class="offer-top">
-              <span class="badge">Live checkout</span>
-              <span class="price">$39 one-time</span>
-            </div>
-            <div class="offer-body">
-              <h3>ClearUse</h3>
-              <p>
-                Your team is already using AI. ClearUse turns real workplace AI use into
-                understandable rules, risk guidance, employee guardrails, and a practical
-                governance starter kit.
-              </p>
-              <ul class="deliverables">
-                <li>Workplace AI-use guidance</li>
-                <li>Employee rules and review controls</li>
-                <li>Practical governance starter materials</li>
-              </ul>
-            </div>
-            <div class="offer-footer">
-              <a class="button button-primary" href="https://buy.stripe.com/28EaEYgohbjhcTVbFk8so02" aria-label="Purchase ClearUse AI Governance Kit for $39">
-                Get ClearUse <span aria-hidden="true">→</span>
-              </a>
-            </div>
-            <p style="font-size:.78rem;line-height:1.55;">Live checkout is available now. Purchase confirmation includes delivery and onboarding instructions.</p>
-          </article>
-
-          <article class="offer" id="clauseguard">
-            <div class="offer-top">
-              <span class="badge">Live checkout</span>
-              <span class="price">$19 one-time</span>
-            </div>
-            <div class="offer-body">
-              <h3>ClauseGuard</h3>
-              <p>
-                A focused preflight for SaaS and vendor agreements. Surface commercial
-                terms worth slowing down for before you accept a contract or renewal.
-              </p>
-              <ul class="deliverables">
-                <li>Renewal and cancellation flags</li>
-                <li>Pricing, commitment, and termination review</li>
-                <li>Liability and data/IP review prompts</li>
-              </ul>
-            </div>
-            <div class="offer-footer">
-              <a class="button button-primary" href="https://buy.stripe.com/00weVe1tnafddXZfVA8so03" aria-label="Purchase ClauseGuard Decision Brief for $19">
-                Get ClauseGuard <span aria-hidden="true">→</span>
-              </a>
-            </div>
-            <p style="font-size:.78rem;line-height:1.55;">Educational contract guidance only. Not legal advice.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process-section" id="approach">
-      <div class="shell process-grid">
-        <div>
-          <div class="section-kicker">How we work</div>
-          <h2 class="section-heading">Good judgment needs a clear process.</h2>
-          <p class="section-intro">
-            Technology can move quickly without forcing your team to make careless decisions.
-            We slow down the right moments and make the next step understandable.
-          </p>
-        </div>
-        <div class="steps">
-          <article class="step"><div><h3>Define the decision</h3><p>Start with the specific choice, risk, or uncertainty your team is facing.</p></div></article>
-          <article class="step"><div><h3>Make the evidence understandable</h3><p>Turn technical or scattered information into a plain-English review.</p></div></article>
-          <article class="step"><div><h3>Leave a useful next step</h3><p>Finish with a practical action or record—not a pile of jargon.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="shell about-grid">
-        <div class="about-copy">
-          <div class="section-kicker">Why Tony Intelligence</div>
-          <h2 class="section-heading">Technology should serve people—not overwhelm them.</h2>
-          <p>
-            Tony Intelligence is built for owners, operators, and small teams who need
-            practical answers but do not have a dedicated technology, security, or AI department.
-            We do the digging, explain what matters, and stay honest about what is still unknown.
-          </p>
-        </div>
-        <aside class="about-card">
-          <p>“Smart enough to do the digging. Grounded enough to tell you what actually matters.”</p>
-          <small>Tony Intelligence standard</small>
-        </aside>
-      </div>
-    </section>
-
-
+      <aside class="side"><h3>What you get</h3><ul class="checklist"><li>guided payment-change workflow</li><li>required control questions</li><li>independent-contact prompts</li><li>visible warning conditions</li><li>clear decision state</li><li>Payment Change Decision Record for your files</li></ul><p class="price">$29 one-time</p><p class="delivery">No subscription</p><a class="button" href="https://change-check.reecewhisler.chatgpt.site/" aria-label="Open ChangeCheck">Try ChangeCheck — $29 →</a><p class="micro">Review the live product before purchasing.</p></aside>
+    </div></section>
+    <section class="section" id="clearuse"><div class="shell detail">
+      <div class="copy"><div class="kicker">Practical AI governance</div><h2>ClearUse</h2><p class="lede">“Can my employee paste this customer information into ChatGPT?”</p><p>For many small businesses, the current AI policy is effectively: <strong>“Use your best judgment.”</strong></p><p>That is becoming increasingly risky and confusing.</p><p>ClearUse helps a small business turn vague expectations into practical AI rules employees can understand and follow.</p><div class="example"><h3>Before employees are left guessing</h3><p>An employee wants to use an AI tool to:</p><ul class="checklist dash"><li>summarize customer notes</li><li>rewrite an email</li><li>analyze a spreadsheet</li><li>draft a proposal</li><li>upload a company document</li></ul><p style="margin:18px 0 0">ClearUse helps the organization establish what is allowed before employees are left guessing.</p></div></div>
+      <aside class="coming"><span class="status soon">Coming Soon</span><h3>What ClearUse can provide</h3><ul class="checklist"><li>tailored employee AI-use policy</li><li>employee quick guide</li><li>Approved AI Tool Register</li><li>rules for sensitive information</li><li>human-review requirements</li><li>high-impact decision guidance</li><li>14-day rollout checklist</li><li>AI incident reporting form</li></ul></aside>
+    </div></section>
+    <section class="section tinted" id="clauseguard"><div class="shell detail">
+      <div class="copy"><div class="kicker">Educational contract support</div><h2>ClauseGuard</h2><p class="lede">“Before I click Accept—is there anything in these terms I should slow down and look at?”</p><p>Small businesses often adopt software without someone reviewing every commercial term.</p><p>ClauseGuard helps surface terms that deserve attention before a business signs, renews, or adopts a vendor.</p><div class="example"><h3>Terms worth bringing forward</h3><p>An agreement may contain:</p><ul class="checklist dash"><li>automatic 12-month renewal</li><li>60-day cancellation notice</li><li>unilateral price increases</li><li>broad rights to uploaded content</li><li>limitations on vendor liability</li><li>early termination restrictions</li></ul><p style="margin:18px 0 0">ClauseGuard brings those terms forward and explains why they may matter.</p></div><p class="legal">ClauseGuard provides educational contract-review support. It is not legal advice and does not determine whether an agreement is legally safe or advisable.</p></div>
+      <aside class="coming"><span class="status soon">Coming Soon</span><h3>What it can provide</h3><ul class="checklist"><li>highlighted contract language</li><li>plain-English explanation</li><li>missing-protection indicators</li><li>questions to ask the vendor</li><li>decision brief for your records</li></ul></aside>
+    </div></section>
+    <section class="section dark" id="standard"><div class="shell standard"><div><svg class="standard-mark" viewBox="0 0 54 62" role="img" aria-label="Tony Intelligence shield"><path d="M27 2 50 10v18c0 15-9.5 25.7-23 32C13.5 53.7 4 43 4 28V10L27 2Z" fill="#fff" opacity=".08"/><path d="M27 7.8 44.5 14v13.8c0 11.6-6.8 20.1-17.5 25.7-10.7-5.6-17.5-14.1-17.5-25.7V14L27 7.8Z" fill="none" stroke="#c3a166" stroke-width="1.6"/><path d="M16 20h22v5h-8v20h-6V25h-8v-5Z" fill="#fff"/><path d="M34 28h5v17h-5z" fill="#c3a166"/></svg></div><div><div class="kicker">The Tony Intelligence Standard</div><h2>Tell the truth. Show the evidence. Admit uncertainty. Protect the person making the decision.</h2><div class="standard-copy"><p>Our tools are designed to make complicated digital decisions easier to understand—not to manufacture certainty.</p><p>When something is known, we’ll tell you.</p><p>When something is uncertain, we’ll tell you that too.</p><p>And when a professional needs to be involved, we’ll say so.</p><p><strong>Your trust matters more than making the sale.</strong></p></div></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="shell">
-      <div class="footer-top">
-        <div>
-          <div class="footer-brand">Tony Intelligence</div>
-          <p class="footer-copy">
-            Practical, privacy-minded tools and guidance for people and small organizations
-            navigating AI, technology, payments, and digital risk.
-          </p>
-        </div>
-        <div class="footer-contact">
-          <strong>Questions or support</strong>
-          <a href="mailto:reece@tonyintelligence.com">reece@tonyintelligence.com</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Tony Intelligence · United States</span>
-        <span class="footer-trust">
-          Practical guidance only. We do not replace legal, financial,
-          cybersecurity, or other professional advice.
-        </span>
-      </div>
-    </div>
-  </footer>
+  <footer><div class="shell"><div class="footer-grid"><div><div class="footer-brand">Tony Intelligence</div><p class="footer-copy">Practical intelligence, tools, and guidance for people and small organizations navigating modern digital decisions.</p></div><div class="footer-contact"><strong>Questions or support</strong><a href="mailto:reece@tonyintelligence.com">reece@tonyintelligence.com</a><p class="footer-note">Questions? We’re real people. Reach out.</p></div></div><div class="footer-bottom"><span>© 2026 Tony Intelligence · United States</span><span>Practical guidance only. Professional review may still be appropriate.</span></div></div></footer>
 </body>
 </html>
