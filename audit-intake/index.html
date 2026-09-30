@@ -16,73 +16,19 @@
     *,*:before,*:after{box-sizing:border-box}body{margin:0;color:var(--deep);background:linear-gradient(180deg,#F8FAFC,#F1F5F9);font-family:Inter,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit}.shell{width:min(900px,calc(100% - 32px));margin:auto}:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
     header{border-bottom:1px solid var(--line);background:rgba(255,255,255,.97)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}.mark{width:40px;height:44px;object-fit:contain}.brand-copy{display:grid;line-height:1}.brand-copy strong{font:700 1.16rem/1 Poppins,Inter,Arial,sans-serif;letter-spacing:-.02em}.brand-copy span{margin-top:6px;color:var(--slate);font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.support{color:var(--blue);font-size:.86rem;font-weight:750;text-decoration:none}.support:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
     main{padding:64px 0 76px}.receipt{margin-bottom:26px;padding:34px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.eyebrow{margin-bottom:12px;color:var(--accent);font-size:.73rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}h1{margin:0 0 14px;color:var(--deep);font:700 clamp(2rem,5vw,3.35rem)/1.08 Poppins,Inter,Arial,sans-serif;letter-spacing:-.035em}.lead{margin:0;color:var(--ink);font-size:1.06rem}.delivery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}.note{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--soft);color:var(--ink);font-size:.91rem}.note strong{display:block;margin-bottom:2px;color:var(--navy)}.warning{margin-top:14px;padding:14px 16px;border-left:4px solid var(--accent);background:#EFF6FF;color:var(--ink);font-size:.9rem}
-    .form-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.form-head{padding:26px 30px 20px;border-bottom:1px solid var(--line)}.form-head h2{margin:0 0 6px;font:700 1.48rem/1.2 Poppins,Inter,Arial,sans-serif;letter-spacing:-.02em}.form-head p{margin:0;color:var(--slate);font-size:.92rem}iframe{display:block;width:100%;min-height:620px;border:0;background:#fff}.fallback{margin:0;padding:0 30px 28px;color:var(--slate);font-size:.82rem}.fallback a{color:var(--accent);font-weight:750}.complete-card{display:none;padding:34px 30px}.complete-card.is-visible{display:block}.complete-card .eyebrow{margin-bottom:10px}.complete-card h2{margin:0 0 10px;font:700 clamp(1.65rem,4vw,2.25rem)/1.15 Poppins,Inter,Arial,sans-serif;letter-spacing:-.03em}.complete-card p{margin:0 0 14px;color:var(--ink)}.complete-card .complete-note{margin-top:18px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--soft);font-size:.92rem}.complete-card .done{margin-top:18px;color:var(--navy);font-weight:800}
-    footer{padding:30px 0;color:rgba(255,255,255,.68);background:var(--navy);font-size:.82rem}.foot{display:flex;align-items:center;justify-content:space-between;gap:24px}.foot-brand{display:flex;align-items:center;gap:12px}.foot-mark{width:34px;height:38px;object-fit:contain}.foot strong{display:block;color:#fff;font-family:Poppins,Inter,Arial,sans-serif}.foot a{color:#fff}@media(max-width:680px){.shell{width:min(100% - 22px,900px)}.nav{min-height:68px}.brand-copy span,.support{display:none}main{padding:32px 0 48px}.receipt{padding:24px 20px;border-radius:16px}.delivery{grid-template-columns:1fr}.form-card{border-radius:16px}.form-head{padding:22px 20px 17px}iframe{min-height:680px}.fallback{padding:0 20px 22px}.complete-card{padding:26px 20px}.foot{display:grid;gap:14px}}
+    .form-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.form-head{padding:26px 30px 20px;border-bottom:1px solid var(--line)}.form-head h2{margin:0 0 6px;font:700 1.48rem/1.2 Poppins,Inter,Arial,sans-serif;letter-spacing:-.02em}.form-head p{margin:0;color:var(--slate);font-size:.92rem}iframe{display:block;width:100%;min-height:620px;border:0;background:#fff}.fallback{margin:0;padding:0 30px 28px;color:var(--slate);font-size:.82rem}.fallback a{color:var(--accent);font-weight:750}
+    footer{padding:30px 0;color:rgba(255,255,255,.68);background:var(--navy);font-size:.82rem}.foot{display:flex;align-items:center;justify-content:space-between;gap:24px}.foot-brand{display:flex;align-items:center;gap:12px}.foot-mark{width:34px;height:38px;object-fit:contain}.foot strong{display:block;color:#fff;font-family:Poppins,Inter,Arial,sans-serif}.foot a{color:#fff}@media(max-width:680px){.shell{width:min(100% - 22px,900px)}.nav{min-height:68px}.brand-copy span,.support{display:none}main{padding:32px 0 48px}.receipt{padding:24px 20px;border-radius:16px}.delivery{grid-template-columns:1fr}.form-card{border-radius:16px}.form-head{padding:22px 20px 17px}iframe{min-height:680px}.fallback{padding:0 20px 22px}.foot{display:grid;gap:14px}}
   </style>
 </head>
 <body>
   <header><div class="shell nav"><a class="brand" href="/" aria-label="Tony Intelligence home"><img class="mark" src="/assets/ti-shield-navy.png" alt="" width="40" height="44"><span class="brand-copy"><strong>Tony Intelligence</strong><span>Practical digital judgment</span></span></a><a class="support" href="mailto:reece@tonyintelligence.com">Need help? Contact us</a></div></header>
   <main><div class="shell"><section class="receipt" aria-labelledby="intake-title"><div class="eyebrow">Payment confirmed</div><h1 id="intake-title">Your payment was received.</h1><p class="lead">Complete the short form below so we can begin your audit.</p><div class="delivery"><div class="note"><strong>Delivery</strong>Your personalized AI Visibility &amp; Opportunity Audit will be delivered within 24 hours.</div><div class="note"><strong>Access</strong>No passwords or private account access are required.</div></div><div class="warning"><strong>Protect your information:</strong> Do not submit passwords, private credentials, or confidential client information.</div></section>
     <section class="form-card" aria-labelledby="form-title">
-      <div id="intake-active">
-        <div class="form-head"><h2 id="form-title">Audit details</h2><p>Required fields are marked in the form. Notes are optional.</p></div>
-        <iframe id="audit-form" title="Tony Intelligence AI Visibility Audit intake form" data-tally-src="https://tally.so/embed/A7MJNW?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <p id="intake-fallback" class="fallback">If the form does not load, <a href="https://tally.so/r/A7MJNW">open the secure intake form directly</a>.</p>
-      </div>
-      <div id="intake-complete" class="complete-card" role="status" aria-live="polite" tabindex="-1">
-        <div class="eyebrow">Audit details received</div>
-        <h2>You’re all set.</h2>
-        <p>We’ve received your audit details and will begin your AI Visibility &amp; Opportunity Audit.</p>
-        <div class="complete-note"><strong>Delivery</strong><br>Within 24 hours of confirmed payment + usable intake.</div>
-        <p class="done">No further action is required.</p>
-        <p>Questions? <a href="mailto:reece@tonyintelligence.com">reece@tonyintelligence.com</a></p>
-      </div>
+      <div class="form-head"><h2 id="form-title">Audit details</h2><p>Required fields are marked in the form. Notes are optional.</p></div>
+      <iframe id="audit-form" title="Tony Intelligence AI Visibility Audit intake form" data-tally-src="https://tally.so/embed/A7MJNW?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <p class="fallback">If the form does not load, <a href="https://tally.so/r/A7MJNW">open the secure intake form directly</a>.</p>
     </section></div></main>
   <footer><div class="shell foot"><div class="foot-brand"><img class="foot-mark" src="/assets/ti-shield-white.png" alt="" width="34" height="38"><span><strong>Tony Intelligence</strong>© 2026 · United States</span></div><a href="mailto:reece@tonyintelligence.com">reece@tonyintelligence.com</a></div></footer>
 <script src="https://tally.so/widgets/embed.js" async></script>
-  <script>
-    (function () {
-      var STORAGE_KEY = 'ti_ai_visibility_audit_intake_submitted_v1';
-      var active = document.getElementById('intake-active');
-      var complete = document.getElementById('intake-complete');
-      var form = document.getElementById('audit-form');
-
-      function showComplete(persist) {
-        if (persist) {
-          try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
-        }
-        if (active) active.hidden = true;
-        if (complete) {
-          complete.classList.add('is-visible');
-          complete.focus({ preventScroll: true });
-        }
-      }
-
-      try {
-        if (localStorage.getItem(STORAGE_KEY) === '1') {
-          showComplete(false);
-        }
-      } catch (e) {}
-
-      window.addEventListener('message', function (event) {
-        if (event.origin !== 'https://tally.so') return;
-        if (!form || event.source !== form.contentWindow) return;
-        if (!event.data || event.data.event !== 'Tally.FormSubmitted') return;
-        showComplete(true);
-      });
-
-      window.addEventListener('Tally.FormSubmitted', function () {
-        showComplete(true);
-      });
-
-      window.addEventListener('load', function () {
-        if (window.Tally && typeof window.Tally.loadEmbeds === 'function') {
-          window.Tally.loadEmbeds();
-        } else if (form && !form.src) {
-          form.src = form.getAttribute('data-tally-src');
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
