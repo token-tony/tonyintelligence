@@ -12,7 +12,7 @@ Support: reece@tonyintelligence.com
 Reece owns the fulfillment queue unless explicitly reassigned.
 
 The manual source of truth is:
-Stripe paid order + Tally intake submission.
+Stripe paid order + email intake (legacy Tally submissions may also be reconciled).
 
 An audit enters fulfillment only when both are present and reasonably reconciled.
 
@@ -33,7 +33,7 @@ An audit enters fulfillment only when both are present and reasonably reconciled
 - If no match is found, ask the customer for the email used at checkout or the Stripe receipt/session reference.
 - Escalate unresolved identity to Reece.
 
-### Different Stripe and Tally emails
+### Different Stripe and intake emails
 - Reconcile using business name, website, purchase time, customer name, and customer confirmation.
 - If still ambiguous, ask which email was used at checkout.
 - Record both emails once matched.
@@ -247,3 +247,8 @@ Only public business material enters research prompts. Keep order emails, paymen
 - Sources disagree: show dated discrepancy; ask owner to confirm before declaring truth.
 - Draft says 'guaranteed rankings', 'invisible to AI', unsupported savings, or security verdict: fail QA.
 - Missing source, wrong business, unverified recipient, or no visual PDF review: fail QA.
+
+
+## 12. Active intake simplification (supersedes earlier Tally-first instructions)
+
+Browser QA found unconditional payment-received text and a required personal name inside the legacy Tally form. The active canonical intake now uses email only: business name, public URL, city/state and checkout email. The Stripe redirect is unchanged. No form submission or automatic receipt is implied. Existing Tally orders still require reconciliation and must not be lost. The old external form remains outside the current website flow; no claim is made that its hosted content was edited or deactivated. Review the support inbox for subject Paid audit intake. Do not tell a buyer to use the legacy form.
